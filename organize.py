@@ -3,7 +3,11 @@ from pathlib import Path
 import shutil
 
 folder = Path(input("Enter folder path: "))
-log_path = folder / "activity.log"
+# To ignore iterating python script as file object later
+script_path = Path(__file__).resolve() 
+
+# To ignore iterating activity log as file object later
+log_path = folder / "activity.log" 
 
 # Track file processing results
 moved_count = 0
@@ -14,7 +18,12 @@ skipped_count = 0
 if not folder.is_dir():
     print("Invalid folder path:", folder) 
 else:
-    total_files = sum(1 for file in folder.iterdir() if file.is_file()  and file != log_path)
+    total_files = sum(
+        1 for file in folder.iterdir()
+        if file.is_file()
+        and file.resolve() != log_path.resolve()
+        and file.resolve() != script_path
+    )
     print("Total files found:", total_files)
     
     if total_files == 0:
@@ -32,7 +41,7 @@ else:
 
         if dry_run:
             for file in folder.iterdir():
-                if file.is_file() and file != log_path:
+                if file.is_file() and file != log_path and file.resolve() != script_path:
                     extension = file.suffix.lower().replace(".", "")
 
                     if extension:
@@ -50,7 +59,7 @@ else:
         else:
             with open(log_path, "a") as log_file:
                 for file in folder.iterdir():
-                    if file.is_file() and file != log_path:
+                    if file.is_file() and file != log_path and file.resolve() != script_path:
                         extension = file.suffix.lower().replace(".", "")
 
                         if extension:
