@@ -1,3 +1,12 @@
+# PROJECT FEATURES:
+# File handling and validation.
+# Data cleaning and filtering.
+# Duplicate removal.
+# Error handling.
+# Functions.
+# Summary reports.
+# Protection against overwriting files.
+
 import csv
 
 def is_csv_file(filename):

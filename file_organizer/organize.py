@@ -1,3 +1,15 @@
+# PROJECT FEATURES:
+# File and folder handling.
+# CSV file validation.
+# Input validation.
+# Data cleaning and filtering.
+# Age-based record filtering.
+# Duplicate removal.
+# Error handling.
+# Functions.
+# Summary reports.
+# Protection against overwriting existing files.
+
 from datetime import datetime
 from pathlib import Path
 import shutil
