@@ -1,0 +1,27 @@
+Remaining 25 days
+Planned
+ 4. PDF Automation — Days 6–12
+- Read text from PDF files.
+- Extract useful information.
+- Save extracted information into Excel.
+Example: Extract invoice details from text-based PDF invoices.
+
+Planned
+ 5. Business Report Automation — Days 13–21
+- Combine multiple Excel files.
+- Clean and validate records.
+- Generate a consolidated business report.
+Example: Combine employee records from five Excel files into one report.
+
+Planned
+ 6. Final Project + Delivery — Days 22–30
+- Build a more complete business automation tool.
+- Improve error handling.
+- Create a simple user interface or executable.
+- Prepare a basic portfolio project.
+Our target by Day 30
+- 5–6 practical projects.
+- Confidence handling files, CSV, Excel and PDFs.
+- Ability to build and deliver a useful automation tool.
+- A foundation for testing freelance opportunities.
+One rule: We won't rush just to finish the list. Understanding and building working projects matters more than the project count.
